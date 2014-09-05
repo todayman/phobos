@@ -20,8 +20,10 @@ enum: int
 {
     AF_IPX =        4,
     AF_APPLETALK =  5,
+    AF_RXRPC =      33,
     PF_IPX =        AF_IPX,
     PF_APPLETALK =  AF_APPLETALK,
+    PF_RXRPC =      AF_RXRPC,
 }
 
 enum: int

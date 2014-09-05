@@ -36,7 +36,7 @@ enum : int
     RXRPC_SECURITY_KEY =            1,    /* [clnt] set client security key */
     RXRPC_SECURITY_KEYRING =        2,    /* [srvr] set ring of server security keys */
     RXRPC_EXCLUSIVE_CONNECTION =    3,    /* [clnt] use exclusive RxRPC connection */
-    RXRPC_MIN_SECURITY_LEVEL =        4,    /* minimum security level */
+    RXRPC_MIN_SECURITY_LEVEL =      4,    /* minimum security level */
 }
 
 /*
@@ -46,13 +46,13 @@ enum : int
 enum : int
 {
     RXRPC_USER_CALL_ID =    1,    /* user call ID specifier */
-    RXRPC_ABORT =            2,    /* abort request / notification [terminal] */
-    RXRPC_ACK =                3,    /* [Server] RPC op final ACK received [terminal] */
-    RXRPC_NET_ERROR =        5,    /* network error received [terminal] */
+    RXRPC_ABORT =           2,    /* abort request / notification [terminal] */
+    RXRPC_ACK =             3,    /* [Server] RPC op final ACK received [terminal] */
+    RXRPC_NET_ERROR =       5,    /* network error received [terminal] */
     RXRPC_BUSY =            6,    /* server busy received [terminal] */
-    RXRPC_LOCAL_ERROR =        7,    /* local error generated [terminal] */
+    RXRPC_LOCAL_ERROR =     7,    /* local error generated [terminal] */
     RXRPC_NEW_CALL =        8,    /* [Server] new incoming call notification */
-    RXRPC_ACCEPT =            9,    /* [Server] accept request */
+    RXRPC_ACCEPT =          9,    /* [Server] accept request */
 }
 
 /*
@@ -60,8 +60,8 @@ enum : int
  */
 enum : int
 {
-    RXRPC_SECURITY_PLAIN =        0,    /* plain secure-checksummed packets only */
-    RXRPC_SECURITY_AUTH =        1,    /* authenticated packets */
+    RXRPC_SECURITY_PLAIN =      0,    /* plain secure-checksummed packets only */
+    RXRPC_SECURITY_AUTH =       1,    /* authenticated packets */
     RXRPC_SECURITY_ENCRYPT =    2,    /* encrypted packets */
 }
 
@@ -71,7 +71,7 @@ enum : int
 enum : int
 {
     RXRPC_SECURITY_NONE =    0,    /* no security protocol */
-    RXRPC_SECURITY_RXKAD =     2,    /* kaserver or kerberos 4 */
+    RXRPC_SECURITY_RXKAD =   2,    /* kaserver or kerberos 4 */
     RXRPC_SECURITY_RXGK =    4,    /* gssapi-based */
     RXRPC_SECURITY_RXK5 =    5,    /* kerberos 5 */
 }

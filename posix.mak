@@ -192,7 +192,7 @@ STD_CONTAINER_MODULES = $(addprefix std/container/, package array \
         binaryheap dlist rbtree slist util)
 
 # OS-specific D modules
-EXTRA_MODULES_LINUX := $(addprefix std/c/linux/, linux socket)
+EXTRA_MODULES_LINUX := $(addprefix std/c/linux/, linux socket rxrpc)
 EXTRA_MODULES_OSX := $(addprefix std/c/osx/, socket)
 EXTRA_MODULES_FREEBSD := $(addprefix std/c/freebsd/, socket)
 EXTRA_MODULES_WIN32 := $(addprefix std/c/windows/, com stat windows		\

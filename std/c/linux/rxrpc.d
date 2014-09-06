@@ -75,3 +75,15 @@ enum : int
     RXRPC_SECURITY_RXGK =    4,    /* gssapi-based */
     RXRPC_SECURITY_RXK5 =    5,    /* kerberos 5 */
 }
+
+void addCallID(ubyte[] control, ulong id, ref uint ctrllen)
+{
+    cmsghdr * cmsg = cast(cmsghdr*)(control.ptr + ctrllen);
+    ulong * data_ptr;
+    cmsg.cmsg_len  = CMSG_LEN(typeof(id).sizeof);
+    cmsg.cmsg_level = SOL_RXRPC;
+    cmsg.cmsg_type = RXRPC_USER_CALL_ID;
+    data_ptr = cast(ulong*)CMSG_DATA(cmsg);
+    (*data_ptr) = id;
+    ctrllen += cmsg.cmsg_len;
+}

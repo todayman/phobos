@@ -28,6 +28,11 @@ struct sockaddr_rxrpc
     TransportAddr transport;
 };
 
+enum : int
+{
+    SOL_RXRPC = 272,
+}
+
 /*
  * RxRPC socket options
  */

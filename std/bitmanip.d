@@ -2219,9 +2219,9 @@ private union EndianSwapper(T)
     Unqual!T value;
     ubyte[T.sizeof] array;
 
-    static if(is(FloatingPointTypeOf!T == float))
+    static if(is(FloatingPointTypeOf!(Unqual!T) == float))
         uint  intValue;
-    else static if(is(FloatingPointTypeOf!T == double))
+    else static if(is(FloatingPointTypeOf!(Unqual!T) == double))
         ulong intValue;
 
 }
